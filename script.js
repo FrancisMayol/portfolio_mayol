@@ -31,3 +31,27 @@ prevBtn.addEventListener('click', () => {
         updateBook();
     }
 });
+
+// Mobile swipe support
+let touchStartX = 0;
+let touchEndX = 0;
+
+book.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+book.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+    if (swipeDistance > 50 && currentPage > 0) {
+        currentPage--;
+        updateBook();
+    } else if (swipeDistance < -50 && currentPage < pages.length - 1) {
+        currentPage++;
+        updateBook();
+    }
+}
