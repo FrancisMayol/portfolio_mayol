@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Student Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <header>
-         <h1 id="name">Francis Laurence S. Mayol</h1>
-         <img src="profile-pic.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">BSIS - 2nd Year</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
-      <section id="achievements">
-         <h2>Achievements/Certifications</h2>
-         <ul>
-            <li>Introduction To Programming with C# (Coursera)</li>
-            <li>Introduction To Secure Networking (Coursera)</li>
-            <li>Foundations of User Experience (UX) Design (Coursera)</li>
-            <li>Certiport Passer (Java)</li>
-         </ul>
-      </section>
-      <section id="projects">
-         <h2>Previous Projects</h2>
-         <ul>
-            <li>Inventory Management System (C++)</li>
-            <li>Transport Ticketing System (C#)</li>
-            <li>Cafe Inventory Management System (Java)</li>
-         </ul>
-         <h3> Hobbies</h3>
-         <ul>
-            <li>Basketball</li>
-            <li>Studying japanese</li>
-            <li>Playing the guitar</li>
-            <li>Playing video games</li>
-         </ul>
-      </section>
-      <script src="script.js"></script>
-   </body>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Student Portfolio - Book Style</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="book-container">
+   <div class="book">
+
+      <!-- Page 1: Cover / Profile -->
+      <div class="page">
+         <div class="page-content">
+            <h1>Francis Laurence S. Mayol</h1>
+            <img src="profile-pic.jpg" alt="Profile Picture" class="profile-img">
+            <p>BSIS - 2nd Year</p>
+            <button id="theme-toggle">Switch Theme</button>
+         </div>
+      </div>
+
+      <!-- Page 2: Achievements -->
+      <div class="page">
+         <div class="page-content">
+            <h2>Achievements / Certifications</h2>
+            <ul>
+               <li>Introduction To Programming with C# (Coursera)</li>
+               <li>Introduction To Secure Networking (Coursera)</li>
+               <li>Foundations of User Experience (UX) Design (Coursera)</li>
+               <li>Certiport Passer (Java)</li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- Page 3: Projects -->
+      <div class="page">
+         <div class="page-content">
+            <h2>Projects</h2>
+            <ul>
+               <li>Inventory Management System (C++)</li>
+               <li>Transport Ticketing System (C#)</li>
+               <li>Cafe Inventory Management System (Java)</li>
+            </ul>
+
+            <h3>Featured Project</h3>
+            <div class="project-card">
+               <a href="https://mayol-part3.vercel.app/" target="_blank">
+                  <img src="bg.jpg" alt="Part 3 Exam Preview">
+                  <div class="overlay">
+                     <h3>Part 3 Exam</h3>
+                     <p>Click to see</p>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <!-- Page 4: Hobbies -->
+      <div class="page">
+         <div class="page-content">
+            <h2>Hobbies</h2>
+            <ul>
+               <li>Basketball</li>
+               <li>Studying Japanese</li>
+               <li>Playing the guitar</li>
+               <li>Playing video games</li>
+            </ul>
+         </div>
+      </div>
+
+   </div>
+
+   <!-- Navigation -->
+   <button class="nav prev">&#8592;</button>
+   <button class="nav next">&#8594;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
